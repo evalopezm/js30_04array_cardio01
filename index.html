@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Array Cardio 💪</title>
+  <link rel="icon" type="image/png" href="./cardio.png">
 </head>
 
 <body>
@@ -42,7 +43,7 @@
     const fifteen = inventors.filter(inventor => (
       inventor.year >= 1500 && inventor.year < 1600
     ))
-    // console.table(fifteen);
+    console.table(fifteen);
 
 
 
@@ -50,7 +51,7 @@
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names
     const fullName = inventors.map(inventor => `${inventor.first} ${inventor.last}`)
-    // console.log(fullName);
+    console.log(fullName);
 
 
     // Array.prototype.sort()
@@ -68,7 +69,7 @@
     const birthdayOrdered = inventors.sort((firstInventor, secondInventor) =>
       firstInventor.year > secondInventor.year ? (1) : (-1))
 
-    // console.table(birthdayOrdered);
+    console.table(birthdayOrdered);
 
 
     // Array.prototype.reduce()
@@ -76,7 +77,7 @@
     const totalYears = inventors.reduce((total, inventor) => {
       return total + (inventor.passed - inventor.year)
     }, 0)
-    // console.log(totalYears);
+    console.log(totalYears);
 
     // 5. Sort the inventors by years lived
     const oldest = inventors.sort(function (a, b) {
@@ -85,7 +86,7 @@
       return lastGuy > nextGuy ? (-1) : (1)
 
     })
-    // console.table(oldest);
+    console.table(oldest);
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
@@ -103,7 +104,7 @@
       const [bLast, bFirst] = nextOne.split(', ')
       return aLast > bLast ? 1 : -1
     })
-    // console.log(orderName);
+    console.log(orderName);
 
 
     // 8. Reduce Exercise
@@ -118,7 +119,7 @@
       return obj
     }, {})
 
-    // console.log(transportation);
+    console.log(transportation);
 
   </script>
 </body>
